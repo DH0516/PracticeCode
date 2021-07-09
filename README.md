@@ -1,4 +1,5 @@
 # PracticeCode
+#Recursion practice python
 def PS(n):
     if n > 1:
         PS(n-1)
