@@ -1,9 +1,13 @@
 # PracticeCode
 #Recursion practice python
-def PS(n):
+def PrintStar(n):
     if n > 1:
-        PS(n-1)
+        PrintStar(n-1)
     for i in range(n):
         print("*")
         
-PS(5)
+PrintStar(5)
+
+# if loop opens 5 cases
+# for loops work backwards
+# 1-2-3-4-5 -> 15
