@@ -3,7 +3,8 @@ class QueueError(Exception):  # Choose base class for the new exception.
     #  Write code here
     #
     def __init__(self):
-        print("er")
+        pass
+        #What does this do?
 
 class Queue:
     def __init__(self):
