@@ -1,10 +1,8 @@
-class QueueError(Exception):  # Choose base class for the new exception.
+class QueueError(IndexError):  # Choose base class for the new exception.
     #
     #  Write code here
     #
-    def __init__(self):
-        pass
-        #What does this do?
+    pass
 
 class Queue:
     def __init__(self):
@@ -18,29 +16,27 @@ class Queue:
         # Write code here
         #
         self.Que.insert(0, elem)
-        print(elem)
+        print("Put" , elem)
         
     def get(self):
         #
         # Write code here
         #
-        print(Que[0])
-        for i in range(len(Que)): #Reading until i-1
-            Que [i] = Que[i + 1]
-            del Que [i+1]
+        if len(self.Que) > 0:
+            elem = self.Que[-1]
+            del self.Que[-1]
+            return elem
+        else:
+            return QueueError
     
     def __str__(self):
-        return(self.lst)
+        return(str(self.Que))
 
 que = Queue()
 que.put(1)
 que.put("dog")
 que.put(False)
 
-
-try:
-    for i in range(4):
-        print(que.get())
-except:
-    print("Queue error")
+for i in range(4):
+    print(que.get())
 
