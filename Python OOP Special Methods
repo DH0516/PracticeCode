@@ -1,0 +1,14 @@
+# OOP practice and definitions
+
+class MyClass:
+    def __init__(self):
+        self.name = MyClass.__name__  # Class name: MyClass
+        self.dict = MyClass.__dict__  # Namespace returned dictionary (what's inside?)
+        self.module = MyClass.__module__  # Location of the module in the package: __main__
+        self.bases = MyClass.__bases__  # Superclasses: Class 'object'
+
+    def __str__(self):
+        return str(MyClass)  # <class __main__.MyClass>
+
+    def __repr__(self):
+        return "repr"  # If __str__ doesn't exist, this is returned instead (lower priority)
