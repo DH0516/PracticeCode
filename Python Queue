@@ -1,3 +1,5 @@
+#Using base class, exception handling through class
+
 class QueueError(IndexError):  # Choose base class for the new exception.
     #
     #  Write code here
