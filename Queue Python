@@ -17,7 +17,7 @@ class Queue:
         #
         # Write code here
         #
-        self.Que.append(elem)
+        self.Que.insert(0, elem)
         print(elem)
         
     def get(self):
