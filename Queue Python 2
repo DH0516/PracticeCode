@@ -1,4 +1,7 @@
-class QueueError(Exception):  # Choose base class for the new exception.
+#Subclass Practice
+
+
+class QueueError(IndexError):  # Choose base class for the new exception.
     #
     #  Write code here
     #
@@ -15,30 +18,32 @@ class Queue:
         #
         # Write code here
         #
-        self.Que.insert(0,elem)
+        self.Que.insert(0, elem)
+        print("Put" , elem)
         
     def get(self):
         #
         # Write code here
         #
-        def get(self):
-        if len(self.queue) > 0:
-            elem = self.queue[-1]
-            del self.queue[-1]
+        if len(self.Que) > 0:
+            elem = self.Que[-1]
+            del self.Que[-1]
             return elem
         else:
-            raise QueueError
+            return QueueError
     
     def __str__(self):
-        return(self.lst)
-
+        return(str(self.Que))
 
 class SuperQueue(Queue):
-    #
-    # Write new code here.
-    #
-
-
+    def __init__(self):
+        Queue.__init__(self)
+        
+    def isempty(self):
+        if self.Que == []:
+            return True
+        else:
+            return False
 
 
 que = SuperQueue()
@@ -50,6 +55,3 @@ for i in range(4):
         print(que.get())
     else:
         print("Queue empty")
-
-
-
